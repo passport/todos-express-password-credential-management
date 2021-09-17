@@ -9,6 +9,7 @@
 
      <!-- Pico.css -->
     <link rel="stylesheet" href="/stylesheets/pico.css">
+    <script type="text/javascript" src="/scripts/login.js"></script>
     <style>
       article div:nth-of-type(2) {
         display: none;
@@ -43,8 +44,8 @@
             <h1>Sign in</h1>
           </hgroup>
           <form action="/login/password" method="post">
-            <input type="text" name="username" placeholder="Username">
-            <input type="password" name="password" placeholder="Password">
+            <input type="text" name="username" autocomplete="username" placeholder="Username">
+            <input type="password" name="password" autocomplete="current-password" placeholder="Password">
             <button type="submit" class="contrast">Sign in</button>
           </form>
         </div>
