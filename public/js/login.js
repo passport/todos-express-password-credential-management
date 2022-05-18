@@ -2,23 +2,20 @@ window.addEventListener('load', function() {
   console.log('load...');
   
   if (window.PasswordCredential) {
-    navigator.credentials.get({ 'password': true })
+    navigator.credentials
+      .get({ 'password': true, mediation: 'required' })
       .then(function(credential) {
-        console.log('got cred!');
-        console.log(credential)
-      
         if (!credential) { return; }
       
         if (credential.type === 'password') {
-          //document.querySelector('input[name=username]').value = credential.id;
-          //document.querySelector('input[name=password]').value = credential.password;
-          //document.querySelector('form').submit();
+          document.querySelector('input[name=username]').value = credential.id;
+          document.querySelector('input[name=password]').value = credential.password;
+          document.querySelector('form').submit();
         }
       });
     
     
     document.querySelector('form').addEventListener('submit', function(event) {
-      console.log('submit');
       event.preventDefault();
       
       fetch('/login/password', {
