@@ -90,10 +90,29 @@ router.get('/login', function(req, res, next) {
  * a message informing them of what went wrong.
  */
 router.post('/login/password', passport.authenticate('local', {
-  successReturnToOrRedirect: '/',
-  failureRedirect: '/login',
-  failureMessage: true
-}));
+  failureMessage: true,
+  failWithError: true
+}), function(req, res, next) {
+  res.format({
+    'text/html': function() {
+      res.redirect('/');
+    },
+    'application/json': function() {
+      res.json({ ok: true, location: '/' });
+    }
+  });
+}, function(err, req, res, next) {
+  if (err.status !== 401) { return next(err); }
+  
+  res.format({
+    'text/html': function() {
+      res.redirect('/login');
+    },
+    'application/json': function() {
+      res.json({ ok: false, location: '/login' });
+    }
+  });
+});
 
 /* POST /logout
  *
