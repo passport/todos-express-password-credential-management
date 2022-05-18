@@ -103,7 +103,6 @@ router.post('/login/password', passport.authenticate('local', {
   });
 }, function(err, req, res, next) {
   if (err.status !== 401) { return next(err); }
-  
   res.format({
     'text/html': function() {
       res.redirect('/login');
