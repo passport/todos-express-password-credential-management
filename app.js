@@ -38,9 +38,6 @@ app.use(session({
 app.use(csrf());
 app.use(passport.authenticate('session'));
 app.use(function(req, res, next) {
-  var count = req.session.count || 0;
-  req.session.count = ++count;
-  
   var msgs = req.session.messages || [];
   res.locals.messages = msgs;
   res.locals.hasMessages = !! msgs.length;
