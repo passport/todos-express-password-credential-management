@@ -1,6 +1,5 @@
 window.addEventListener('load', function() {
-  console.log('load...');
-  
+
   if (window.PasswordCredential) {
     navigator.credentials
       .get({ 'password': true, mediation: 'required' })
@@ -14,7 +13,6 @@ window.addEventListener('load', function() {
         }
       });
     
-    
     document.querySelector('form').addEventListener('submit', function(event) {
       event.preventDefault();
       
@@ -27,8 +25,6 @@ window.addEventListener('load', function() {
       }).then(function(response) {
         return response.json();
       }).then(function(json) {
-        console.log(json)
-        
         if (json.ok) {
           var credential = new PasswordCredential(event.target);
           navigator.credentials.store(credential)
@@ -43,4 +39,5 @@ window.addEventListener('load', function() {
       });
     });
   }
+  
 });
