@@ -2,7 +2,10 @@ window.addEventListener('load', function() {
 
   if (window.PasswordCredential) {
     navigator.credentials
-      .get({ 'password': true, mediation: 'required' })
+      .get({
+        password: true,
+        mediation: 'required'
+      })
       .then(function(credential) {
         if (!credential) { return; }
       
