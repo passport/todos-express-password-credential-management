@@ -1,5 +1,5 @@
 {
-  "name": "todos-express-password",
+  "name": "todos-express-password-credential-management",
   "version": "0.0.0",
   "private": true,
   "description": "Todo app using Express, Passport, and Credential Management API for sign in with username and password.",
@@ -14,13 +14,13 @@
     "email": "jaredhanson@gmail.com",
     "url": "https://www.jaredhanson.me/"
   },
-  "homepage": "https://github.com/passport/todos-express-password",
+  "homepage": "https://github.com/passport/todos-express-password-credential-management",
   "repository": {
     "type": "git",
-    "url": "git://github.com/passport/todos-express-password.git"
+    "url": "git://github.com/passport/todos-express-password-credential-management.git"
   },
   "bugs": {
-    "url": "https://github.com/passport/todos-express-password/issues"
+    "url": "https://github.com/passport/todos-express-password-credential-management/issues"
   },
   "funding": {
     "type": "github",
