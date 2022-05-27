@@ -4,8 +4,8 @@ This app illustrates how to use [Passport](https://www.passportjs.org/) with
 [Express](https://expressjs.com/) to sign users in with a username and password.
 It takes the [baseline example](https://github.com/passport/todos-express-password)
 and extends it with [Credential Management](https://www.w3.org/TR/credential-management-1/),
-allowing the browser to assist with the storage and selection of credentials.
-Use this example as a starting point for your own web applications.
+allowing the browser to assist with the storage and selection of passwords.  Use
+this example as a starting point for your own web applications.
 
 ## Quick Start
 
