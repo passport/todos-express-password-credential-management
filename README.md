@@ -45,8 +45,8 @@ and the user's browser with a cookie.
 
 The sign in page is progressively enhanced with JavaScript in order to utilize
 the Credential Management API.  For browsers that support it, form submission
-is overridden, so that the user is offered the option to store their password so
-that it can be more easily selected when they later return to the app.
+is overridden and the user is offered the option to store their password making
+it easy to select when they later return to the app.
 
 After signing in, the user can view, create, and edit todo items.  Interaction
 occurs by clicking links and submitting forms, which trigger HTTP requests.
