@@ -12,8 +12,8 @@ Use this example as a starting point for your own web applications.
 To run this app, clone the repository and install dependencies:
 
 ```bash
-$ git clone https://github.com/passport/todos-express-password.git
-$ cd todos-express-password
+$ git clone https://github.com/passport/todos-express-password-credential-management.git
+$ cd todos-express-password-credential-management
 $ npm install
 ```
 
